@@ -1,0 +1,37 @@
+/*---------------------------------------------------------
+ BBcode Toolbar extension based on "Easy BBcode" of X-DOS
+ Author: Quy NGUYEN-DAI <vnpenguin AT vnoss DOT org>
+ Date: 20:52 30/11/2008
+-----------------------------------------------------------*/
+.fld-input INPUT.bbcode_toolbar {
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	background-color: #fff;
+	padding:0px 2px 0px 2px;
+}
+
+#button_bold {
+	FONT-WEIGHT: bold;
+}
+#button_italic {
+	font-style: italic;
+}
+#button_underline {
+	text-decoration:underline;
+}
+#button_red{
+	FONT-WEIGHT: bold;
+	color: red;
+}
+#button_blue {
+	FONT-WEIGHT: bold;
+	color: blue;
+}
+#button_magenta {
+	FONT-WEIGHT: bold;
+	color: #FF00FF;
+}
+#button_green {
+	FONT-WEIGHT: bold;
+	color: #008000;
+}

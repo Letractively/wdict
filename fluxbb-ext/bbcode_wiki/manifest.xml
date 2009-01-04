@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	@description: extension for Wikipedia links
+	@author: 	NGUYEN-DAI Quy <vnpenguin@vnoss.org>
+	@license: 	GPL
+	@copyleft: 	(C) Copyleft by NGUYEN-DAI Quy
+	@homepage: 	http://forum.vnoss.org http://vnoss.org
+	@date: 		12:40 04/01/2009
+-->
+<extension engine="1.0">
+	<id>bbcode_wiki</id>
+	<title>BBCode Wikipedia tags</title>
+	<version>1.0</version>
+	<description>This extension adds a BBCode tags for Wikipedia links.</description>
+	<author>Quy NGUYEN-DAI (vnpenguin@vnoss.org)</author>
+	<minversion>1.3 Beta</minversion>
+	<maxtestedon>1.3 Beta</maxtestedon>
+	<install>
+		<![CDATA[
+		]]>
+	</install>
+	<uninstall>
+		<![CDATA[
+		]]>
+	</uninstall>
+	<hooks>
+		<hook id="hd_head"><![CDATA[
+		$forum_head[] = '<link rel="stylesheet" type="text/css" medira="screen" href="'.$ext_info['url'].'/wiki.css" />';
+		]]></hook>
+		
+		<hook id="ps_fn_do_bbcode_replace"><![CDATA[
+			$pattern[] = '#\[wiki=(\w{2})\](.*?)\[/wiki\]#s';
+			$replace[] = '<a href="http://$1.wikipedia.org/wiki/$2" class="wiki_link" target="_blank">$2</a>';
+		]]></hook>
+		<hook id="ps_fn_preparse_tags_start"><![CDATA[
+			$tags[] = 'wiki';
+			
+			$tags_opened[] = 'wiki';
+			$tags_closed[] = 'wiki';
+			$tags_inline[] = 'wiki';
+			
+			$tags_limit_bbcode['*'][] = 'wiki';
+			$tags_limit_bbcode['url'][] = 'wiki';
+			$tags_limit_bbcode['email'][] = 'wiki';
+			
+			$tags_fix[] = 'wiki';
+		]]></hook>
+		<hook id="he_new_bbcode_text_style"><![CDATA[
+?>			<div class="entry-content">
+				<code>[wiki=en]Vietnamese_language[/wiki]</code> <span><?php echo $lang_help['produces'] ?></span>
+				<samp><a href="http://en.wikipedia.org/wiki/Vietnamese_language" class="wiki_link" target="_blank">Vietnamese_language</a></samp>
+			</div>
+			<div class="entry-content">
+				<code>[wiki=fr]Vietnamien[/wiki]</code> <span><?php echo $lang_help['produces'] ?></span>
+				<samp><a href="http://fr.wikipedia.org/wiki/Vietnamien" class="wiki_link" target="_blank">Vietnamien</a></samp>
+			</div>
+			<div class="entry-content">
+				<code>[wiki=vi]Tiếng_Việt[/wiki]</code> <span><?php echo $lang_help['produces'] ?></span>
+				<samp><a href="http://vi.wikipedia.org/wiki/Tiếng_Việt" class="wiki_link" target="_blank">Tiếng_Việt</a></samp>
+			</div>
+			<div class="entry-content">
+				<code>[wiki=de]Vietnamesische_Sprache[/wiki]</code> <span><?php echo $lang_help['produces'] ?></span>
+				<samp><a href="http://de.wikipedia.org/wiki/Vietnamesische_Sprache" class="wiki_link" target="_blank">Vietnamesische_Sprache</a></samp>
+			</div><?php
+		]]></hook>
+	</hooks>
+</extension>

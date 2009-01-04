@@ -1,0 +1,13 @@
+/* 
+	bbcode_wiki, extension for Wikipedia links
+
+	@author: 	NGUYEN-DAI Quy <vnpenguin@vnoss.org>
+	@license: 	GPL
+	@copyleft: 	(C) Copyleft by NGUYEN-DAI Quy
+	@homepage: 	http://forum.vnoss.org http://vnoss.org
+	@date: 		12:39 04/01/2009
+*/
+a.wiki_link {
+	background: url(external.png) center right no-repeat;
+	padding-right: 13px;
+}

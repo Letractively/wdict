@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+	Based on extension of Daniel Rokven
+	
+	Add resizable effect to textarea form.
+	
+	@author: Quy NGUYEN DAI
+	@date: 20:58 09/12/2008
+*/
+-->
+<extension engine="1.0">
+	<id>jquery_ui</id>
+	<title>jQuery UI (Resizable Textarea)</title>
+	<version>1.0</version>
+	<description>Add jquery.js + UI Resizable effect to Textarea.</description>
+	<author>Nguyen Dai Quy (vnpenguin@vnoss.org)</author>
+	<minversion>1.3 Beta</minversion>
+	<maxtestedon>1.3 Beta</maxtestedon>
+	<install>
+		<![CDATA[
+		]]>
+	</install>
+	<uninstall>
+		<![CDATA[
+		]]>
+	</uninstall>
+
+	<hooks>
+	<hook id="hd_head" priority="2"><![CDATA[
+	$forum_head['jquery'] = '<script type="text/javascript" src="'.$ext_info['url'].'/jquery.js"></script>';
+	$forum_head['jquery-ui'] = '<script type="text/javascript" src="'.$ext_info['url'].'/jquery-ui.js"></script>';
+	$forum_head['jquery-ready'] = '<script type="text/javascript">
+	$(document).ready(function(){
+		$("textarea[name=\'req_message\']").resizable({handles:"all",minWidth:50,minHeight:30,maxWidth:800,maxHeight:600});
+	});</script>';
+	]]></hook>
+	</hooks>
+</extension>
