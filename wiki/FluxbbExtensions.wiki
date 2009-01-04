@@ -1,0 +1,14 @@
+#summary FluxBB extension
+#labels Phase-Implementation
+
+= Introduction =
+
+FluxBB extension
+
+
+= Details =
+
+  * bbcode_toolbar
+  * bbcode_wiki
+  * jquery_ui
+  * mudim
