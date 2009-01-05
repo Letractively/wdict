@@ -1,4 +1,5 @@
-#summary FAQ
 #labels faq
-
 = FAQ =
+
+=== Q: The databases, where they are from ? ===
+All databases provided in this page were converted from public databases of *Open Vietnamese Dictionaries Project* (http://www.tudientiengviet.net). Please read more info at [http://www.tudientiengviet.net/intro.html this page].
