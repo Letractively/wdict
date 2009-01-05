@@ -1,5 +1,5 @@
-#summary FluxBB extension
-#labels Phase-Implementation
+#summary FluxBB extensions
+#labels fluxbb,extension
 
 = Introduction =
 
