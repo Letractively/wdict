@@ -1,4 +1,6 @@
-#labels faq
+#summary FAQ about wdict
+#labels FAQ
+
 = FAQ =
 
 === Q: The databases, where they are from ? ===
